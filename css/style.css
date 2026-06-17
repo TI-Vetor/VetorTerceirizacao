@@ -1,0 +1,272 @@
+:root{
+    --azul:#0B3A67;
+    --azul-claro:#164E86;
+    --laranja:#F28C28;
+    --cinza:#f4f6f8;
+    --branco:#fff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--cinza);
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+header{
+    background:white;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+    z-index:999;
+}
+
+.nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 0;
+}
+
+.logo{
+    height:95px;
+    width:auto;
+}
+
+nav ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+nav a{
+    text-decoration:none;
+    color:var(--azul);
+    font-weight:bold;
+    transition:.3s;
+}
+
+nav a:hover{
+    color: var(--laranja);
+}
+
+.hero{
+    height:90vh;
+
+    background:
+    linear-gradient(
+        rgba(11,58,103,.20),
+        rgba(11,58,103,.20)
+    ),
+    url('../images/bannerIndustrial.png');
+
+    background-size:cover;
+    background-position:65% center;
+
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    color:white;
+    max-width:900px;
+}
+
+.hero h1{
+    font-size:3.2rem;
+    margin-bottom:20px;
+    text-shadow:0 3px 10px rgba(0,0,0,.4);
+}
+
+.hero p{
+    font-size:1.2rem;
+    margin-bottom:30px;
+    text-shadow:0 2px 8px rgba(0,0,0,.3);
+}
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+}
+
+.btn-primary{
+    background:var(--laranja);
+    color:white;
+    padding:15px 30px;
+    border-radius:8px;
+    text-decoration:none;
+}
+
+.btn-secondary{
+    background:white;
+    color:var(--azul);
+    padding:15px 30px;
+    border-radius:8px;
+    text-decoration:none;
+}
+
+section{
+    padding:90px 0;
+}
+
+h2{
+    text-align:center;
+    color:var(--azul);
+    margin-bottom:40px;
+}
+
+#sobre p{
+    text-align:center;
+    line-height:1.8;
+    max-width:900px;
+    margin:auto;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+    text-align:center;
+    transition: .3s;
+    border-top:4px solid var(--laranja);
+}
+
+.card:hover{
+    transform: translateY(-8px);
+}
+
+.card i{
+    color:var(--laranja);
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.diferenciais-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.diferenciais-grid div{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+}
+
+.contatos{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.contato-card{
+    background:white;
+    width:350px;
+    padding:30px;
+    border-radius:12px;
+    text-align:center;
+    border-top:4px solid var(--laranja);
+}
+
+.contato-card a{
+    display:block;
+    margin:15px 0;
+    text-decoration:none;
+    color:#25D366;
+    font-weight:bold;
+}
+
+footer{
+    background:#05213d;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+.footer-logo{
+    width:180px;
+    filter:
+        drop-shadow(0 0 3px rgba(255,255,255,.9))
+        drop-shadow(0 0 8px rgba(255,255,255,.7));
+}
+
+
+.whatsapp-float{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:65px;
+    height:65px;
+    background:#25D366;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-size:30px;
+    text-decoration:none;
+}
+
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:2rem;
+    }
+
+    nav ul{
+        gap:15px;
+        font-size:14px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        align-items:center;
+    }
+}
+
+.hero-badges{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+    margin:30px 0;
+}
+
+.hero-badges span{
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(5px);
+    color:#fff;
+    padding:10px 18px;
+    border-radius:30px;
+    font-size:14px;
+    border:1px solid rgba(255,255,255,0.2);
+}
